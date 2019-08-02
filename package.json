@@ -4,7 +4,9 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "lint": "standard --fix"
+    "lint": "standard --fix",
+    "deploy": "gh-pages-deploy",
+    "predeploy": "npm run build"
   },
   "keywords": [],
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
