@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "build": "parcel build --public-url=./ src/index.html",
     "lint": "standard --fix",
     "deploy": "gh-pages-deploy",
     "clean-source": "rimraf README.md src package.json package-lock.json"
