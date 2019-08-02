@@ -6,7 +6,7 @@
     "build": "parcel build src/index.html",
     "lint": "standard --fix",
     "deploy": "gh-pages-deploy",
-    "predeploy": "npm run build"
+    "clean-source": "rimraf README.md src package.json package-lock.json"
   },
   "keywords": [],
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
@@ -17,10 +17,20 @@
     "babel-preset-env": "^1.7.0",
     "gh-pages-deploy": "^0.5.1",
     "parcel": "^1.12.3",
+    "rimraf": "^2.6.3",
     "standard": "^13.1.0"
   },
   "dependencies": {
     "butterchurn": "^2.6.7",
     "butterchurn-presets": "^2.4.7"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist",
+    "prep": [
+      "build"
+    ],
+    "post": [
+      "clean-source"
+    ]
   }
 }
