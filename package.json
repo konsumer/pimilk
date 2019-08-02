@@ -4,6 +4,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build --public-url=./ src/index.html",
+    "prebuild": "rimraf dist",
     "lint": "standard --fix",
     "deploy": "gh-pages-deploy",
     "clean-source": "rimraf README.md src package.json package-lock.json"
